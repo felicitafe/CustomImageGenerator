@@ -6,4 +6,4 @@
   <img src="3.png" width="200">
 </p>
 
-This script generates an image of 'random' circles based on your birth date, favorite color, and the city live in?. Circles are in a square frame.
+This script generates an image of 'random' circles based on your birth date, favorite color, and the city live in? And yes, circles are in a square frame.
