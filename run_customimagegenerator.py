@@ -6,7 +6,7 @@ def generate_pattern(birth_date, favorite_color, license_plate):
     # convert birth date to a number (e.g., DDMMYYYY)
     birth_date_number = int(birth_date.replace("-", ""))  # format: YYYY-MM-DD
 
-    # conver favorite color (hex or RGB) to a numeric value
+    # convert favorite color (hex or RGB) to a numeric value
     color_value = int(favorite_color.lstrip('#'), 16)  # convert hex color to an integer
 
     # license plate number (convert to a sum of ASCII values)
@@ -42,12 +42,14 @@ def generate_pattern(birth_date, favorite_color, license_plate):
 
     return unique_pattern_seed  # Return the pattern seed for reference
 
+def main():
+    # ask for inputs
+    birth_date = input("Enter your birth date (YYYY-MM-DD): ")
+    favorite_color = input("Enter your favorite color (hex, e.g. #6ed6e6): ")
+    license_plate = input("Enter your license plate number (number, e.g. 34): ")
 
-# ask for inputs
-birth_date = input("Enter your birth date (YYYY-MM-DD): ")  # example: 1453-05-29
-favorite_color = input("Enter your favorite color (hex, e.g. #6ed6e6): ")  # example: #6ed6e6
-license_plate = input("Enter your license plate number (number, e.g. 34 (for Istanbul)): ")  # example: 34XYZ123
+    pattern_seed = generate_pattern(birth_date, favorite_color, license_plate)
+    print(f"Generated Pattern Seed: {pattern_seed}")
 
-# generate the pattern based on the inputs
-pattern_seed = generate_pattern(birth_date, favorite_color, license_plate)
-print(f"Generated Pattern Seed: {pattern_seed}")
+if __name__ == "__main__":
+    main()
